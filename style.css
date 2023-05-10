@@ -1,0 +1,251 @@
+:root{
+    --cor-primaria: #e21;
+    --cor-primaria-secundaria: #900;
+    --fundo-1: #f7f7f7;
+    --fundo-2: #ffffff;
+    --texto: #000000;
+    --texto-subtitulo: rgba(39, 39, 39, 0.467);
+    --onda: url(img/onda-clara.svg);
+}
+
+
+
+@media (prefers-color-scheme:dark){
+    :root{
+        --fundo-1: #111111;
+        --fundo-2: #000000;
+        --texto: #ffffff;
+        --onda: url(img/onda-escura.svg) ;
+    }
+}
+
+
+body{
+    width: 100%;
+    margin: 0px;
+    display: grid;
+    justify-items: center;
+    gap: 60px;
+    font-family: arial;
+    background-color: var(--fundo-1);
+}
+
+/**MENU INICIAL**/
+
+.bikcraft{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+}
+
+.menu li{
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    list-style: none;
+    }
+
+.menu-botao:hover{
+    border: 2px solid var(--cor-primaria);
+}
+
+.menu-botao {
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: var(--fundo-2);
+    color: var(--texto);
+}
+
+
+/** CONTEUDO UM **/
+
+.conteudo-inicial::before{
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: var(--cor-primaria);
+    position: absolute;
+    top: 30px;
+    color: var(--texto);
+}
+
+.conteudo-inicial{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    justify-items: center;
+    align-content: center;
+    position: relative;
+}
+
+.bloco{
+    text-align: end;
+    background-color: var(--fundo-2);
+    padding: 40px;
+    display: grid;
+    text-align: right;
+    align-content: center;
+    gap: 30px;
+    place-items: end;
+    color: var(--texto);
+}
+
+.bloco h1{
+    margin: 0px;
+}
+
+.bloco p {
+    font-size: 1.3rem;
+    margin: 0px;
+}
+
+.botao{
+    background-color: var(--cor-primaria);
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.botao:hover{
+    background-color: var(--cor-primaria-secundaria);
+}
+
+.imagem{
+    max-width: 100%;
+    width: 500px;
+    
+ }
+
+ /** CONTEUDO DOIS **/
+
+ /** SUBTITULO **/
+.conteudo-secundario{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+}
+
+.subtitulo{
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-align: right;
+    align-self: center;
+    color: var(--texto-subtitulo);
+    padding: 40px;
+    background-image: var(--onda);
+    color: var(--texto-subtitulo);
+}
+
+.subtitulo-fundo{
+    background-color: var(--fundo-1);
+    display: flex;
+    justify-content: center;
+}
+
+/** CONTEUDO ICONES **/
+
+.conteudo-adicional{
+    list-style: none;
+    padding: 40px;
+}
+
+.conteudo-secundario{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    background: var(--fundo-2);
+}
+
+
+.teste{
+    margin: 0px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 30px;
+    padding: 10px 20px;
+   
+}
+
+.teste:hover{
+    border-left: 4px solid var(--cor-primaria);
+}
+
+h3 {
+    color: var(--texto);
+    margin: 0px;
+}
+
+p{
+    font-size: 1.3rem;
+    color: var(--texto);
+}
+
+.teste:nth-child(odd){
+    background-color: var(--fundo-1);
+}
+
+.footer{
+    width: 100%;
+    text-align: center;
+    background-color: var(--fundo-2);
+}
+
+
+/** responsivo **/
+
+@media (max-width:900px) {
+
+    /** MENU **/
+
+    body{
+        gap: 10px;
+    }
+
+    .menu{
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+    .menu li{
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+
+    /** CONTEUDO  INICIAL**/
+
+    .conteudo-inicial{
+        grid-template-columns: 1fr;
+    }
+
+    .conteudo-inicial img{
+        grid-row: 2;
+    }
+    
+    .bloco{
+       justify-items: start;
+       text-align: start;
+    }
+
+    .conteudo-secundario {
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        
+    }
+
+    .titulo-grande h2{
+        text-align: center;
+        font-size: 3rem;
+    }
+
+
+}
