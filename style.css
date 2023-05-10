@@ -8,8 +8,6 @@
     --onda: url(img/onda-clara.svg);
 }
 
-
-
 @media (prefers-color-scheme:dark){
     :root{
         --fundo-1: #111111;
@@ -18,7 +16,6 @@
         --onda: url(img/onda-escura.svg) ;
     }
 }
-
 
 body{
     width: 100%;
