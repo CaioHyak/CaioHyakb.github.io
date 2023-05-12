@@ -59,7 +59,6 @@ body{
     color: var(--texto);
 }
 
-
 /** CONTEUDO UM **/
 
 .conteudo-inicial::before{
@@ -195,7 +194,6 @@ p{
     background-color: var(--fundo-2);
 }
 
-
 /** responsivo **/
 
 @media (max-width:900px) {
@@ -243,6 +241,5 @@ p{
         text-align: center;
         font-size: 3rem;
     }
-
 
 }
